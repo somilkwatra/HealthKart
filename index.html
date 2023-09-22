@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthKart</title>
+    <link rel="icon"
+        href="https://play-lh.googleusercontent.com/mU2Yj7oglMuXcjqkuQRzzujw3VL71RD7w6soBPZm4Fbhc0gHTUNfiCKS_dRbsuFx51pw"
+        type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="product-section.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="left">
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Healthkart.png" alt=""></a>
+        </div>
+        <div class="middle">
+            <div class="icon"><ion-icon name="search-outline"></ion-icon></div>
+            <div class="search-bar">
+                <input class="search" type="text" placeholder="Search for products & brands...">
+            </div>
+        </div>
+        </div>
+        <div class="right">
+            <div class="login"><button class="login-btn">Login</button></div>
+            <div class="header-cart"><ion-icon name="cart-outline"></ion-icon></div>
+        </div>
+    </header>
+
+
+    <nav>
+        <div><a href="#">Shop By Category</a></div>
+        <div><a href="#">Best Sellers</a></div>
+        <div><a href="#">Brands</a></div>
+        <div><a href="#">Offer Zone</a></div>
+        <div><a href="#">Blogs</a></div>
+        <div><a href="#">Gift Card</a></div>
+        <div><a href="#">Gift Card</a></div>
+        <div><a href="#">Customer Support</a></div>
+        <div><a href="#">Store Locator</a></div>
+    </nav>
+
+    <div class="lower-nav">India's Largest D2C Nutrition Platform</div>
+
+
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://img10.hkrtcdn.com/29823/bnr_2982279_o.jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+            <img src="https://img6.hkrtcdn.com/30048/bnr_3004765_o.jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+            <img src="https://img2.hkrtcdn.com/29856/bnr_2985511_o.jpg" style="width:100%">
+
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    <script>
+        let slideIndex = 0;
+        let timeoutId = null;
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+
+        showSlides();
+        function currentSlide(index) {
+            slideIndex = index;
+            showSlides();
+        }
+        function plusSlides(step) {
+
+            if (step < 0) {
+                slideIndex -= 2;
+
+                if (slideIndex < 0) {
+                    slideIndex = slides.length - 1;
+                }
+            }
+
+            showSlides();
+        }
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dots[i].classList.remove('active');
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.add('active');
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+            timeoutId = setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+    </script>
+
+
+
+    <div class="product-section">
+        <div class="heading">
+            <div class="main">Fit Food Deals</div>
+            <div class="view-all">View All</div>
+        </div>
+        <div class="cards">
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img2.hkrtcdn.com/30244/prd_3024331_c_s.jpg" alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze High Protein Peanut Butter - 1 kg Dark Chocolate Crunchy </div>
+                <div class="price"><span class="new">&#8377;649</span><span class="old">&#8377;749</span><span
+                        class="offer">13% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img4.hkrtcdn.com/29737/pck_2973663_c_s.jpg" alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze High Protein Muesli 1kg & HealthKart Fish Oil 60 Capsules...</div>
+                <div class="price"><span class="new">&#8377;925</span><span class="old">&#8377;1,294</span><span
+                        class="offer">28% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img6.hkrtcdn.com/30239/pck_3023815_c_s.jpg" alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze High Protein Oats 2kg Dark Chocolate & Sipper Combo </div>
+                <div class="price"><span class="new">&#8377;1,299</span><span class="old">&#8377;2,098</span><span
+                        class="offer">38% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img6.hkrtcdn.com/29690/pck_2968925_c_s.jpg" alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">Budget Fitness Treats </div>
+                <div class="price"><span class="new">&#8377;1,399</span><span class="old">&#8377;2,125</span><span
+                        class="offer">34% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="product-section">
+        <div class="heading">
+            <div class="main">Pick Of The Day</div>
+            <div class="view-all">View All</div>
+        </div>
+        <div class="cards">
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img8.hkrtcdn.com/28713/prd_2871227-MB-Fuel-One-Whey-Protein-2.2-lb-Chocolate_c_s.jpg"
+                        alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MB Fuel One Whey Protein, 1 kg (2.2 lb), Chocolate
+                </div>
+                <div class="price"><span class="new">&#8377;1,775</span><span class="old">&#8377;2,599</span><span
+                        class="offer">31% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img7.hkrtcdn.com/23182/prd_2318156-MuscleBlaze-Liquid-LCarnitine-450-ml-Lemon-Lime_c_s.jpg"
+                        alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze Liquid L-Carnitine, 450 ml, Lemon Lime
+                </div>
+                <div class="price"><span class="new">&#8377;599</span><span class="old">&#8377;799</span><span
+                        class="offer">25% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img1.hkrtcdn.com/27401/prd_2740040-GNC-Pro-Performance-100-Whey-Protein-4-lb-Chocolate-Fudge_c_s.jpg"
+                        alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">GNC Pro Performance 100% Whey Protein, 4 lb, Chocolate Fudge </div>
+                <div class="price"><span class="new">&#8377;7,499</span><span class="old">&#8377;4,499</span><span
+                        class="offer">40% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img5.hkrtcdn.com/27428/prd_2742714-MuscleBlaze-Biozyme-Performance-Whey-4.4-lb-Rich-Chocolate_c_s.jpg"
+                        alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze Biozyme Performance Whey, 4.4 lb, Rich Chocolate </div>
+                <div class="price"><span class="new">&#8377;4,099</span><span class="old">&#8377;5,499</span><span
+                        class="offer">25% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="product-section">
+        <div class="heading">
+            <div class="main">Flash Sales</div>
+            <div class="view-all">View All</div>
+        </div>
+        <div class="cards">
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img2.hkrtcdn.com/30244/prd_3024331_c_s.jpg" alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze High Protein Peanut Butter - 1 kg Dark Chocolate Crunchy </div>
+                <div class="price"><span class="new">&#8377;649</span><span class="old">&#8377;749</span><span
+                        class="offer">13% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img4.hkrtcdn.com/29737/pck_2973663_c_s.jpg" alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze High Protein Muesli 1kg & HealthKart Fish Oil 60 Capsules...</div>
+                <div class="price"><span class="new">&#8377;925</span><span class="old">&#8377;1,294</span><span
+                        class="offer">28% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img6.hkrtcdn.com/30239/pck_3023815_c_s.jpg" alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze High Protein Oats 2kg Dark Chocolate & Sipper Combo </div>
+                <div class="price"><span class="new">&#8377;1,299</span><span class="old">&#8377;2,098</span><span
+                        class="offer">38% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img6.hkrtcdn.com/29690/pck_2968925_c_s.jpg" alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">Budget Fitness Treats </div>
+                <div class="price"><span class="new">&#8377;1,399</span><span class="old">&#8377;2,125</span><span
+                        class="offer">34% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="product-section">
+        <div class="heading">
+            <div class="main">Best Selling</div>
+            <div class="view-all">View All</div>
+        </div>
+        <div class="cards">
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img8.hkrtcdn.com/28713/prd_2871227-MB-Fuel-One-Whey-Protein-2.2-lb-Chocolate_c_s.jpg"
+                        alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MB Fuel One Whey Protein, 1 kg (2.2 lb), Chocolate
+                </div>
+                <div class="price"><span class="new">&#8377;1,775</span><span class="old">&#8377;2,599</span><span
+                        class="offer">31% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img7.hkrtcdn.com/23182/prd_2318156-MuscleBlaze-Liquid-LCarnitine-450-ml-Lemon-Lime_c_s.jpg"
+                        alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze Liquid L-Carnitine, 450 ml, Lemon Lime
+                </div>
+                <div class="price"><span class="new">&#8377;599</span><span class="old">&#8377;799</span><span
+                        class="offer">25% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img1.hkrtcdn.com/27401/prd_2740040-GNC-Pro-Performance-100-Whey-Protein-4-lb-Chocolate-Fudge_c_s.jpg"
+                        alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">GNC Pro Performance 100% Whey Protein, 4 lb, Chocolate Fudge </div>
+                <div class="price"><span class="new">&#8377;7,499</span><span class="old">&#8377;4,499</span><span
+                        class="offer">40% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+
+            <div class="card">
+                <div class="product-img">
+                    <img src="https://img5.hkrtcdn.com/27428/prd_2742714-MuscleBlaze-Biozyme-Performance-Whey-4.4-lb-Rich-Chocolate_c_s.jpg"
+                        alt="image">
+                    <div class="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
+                </div>
+
+                <div class="name">MuscleBlaze Biozyme Performance Whey, 4.4 lb, Rich Chocolate </div>
+                <div class="price"><span class="new">&#8377;4,099</span><span class="old">&#8377;5,499</span><span
+                        class="offer">25% off</span></div>
+                <div class="cart"><button class="cart-btn"><ion-icon class="cart-icon"
+                            name="cart-outline"></ion-icon>Add to Cart</button></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="main"><a href="">Copyright © 2023, HealthKart.com, or its affiliates</a></div>
+        <div><a href="">Terms & Condition</a></div>
+        <div><a href="">Delivery Policy</a></div>
+        <div><a href="">Privacy Policy</a></div>
+        <div><a href="">Disclaimer</a></div>
+        <div><a href="">Returns Policy</a></div>
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

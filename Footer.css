@@ -1,0 +1,19 @@
+.footer{
+    background-color: #0d2122;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px 30px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.footer .main{
+    margin-right: 150px;
+}

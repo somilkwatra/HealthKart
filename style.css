@@ -1,0 +1,136 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    position:relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    height: 85px;
+
+    /* box-shadow: 2px 2px 2px rgba(0,0,0,0.14); */
+    border-bottom: 2px solid #dbdee9;
+}
+
+
+.left img{
+    width: 240px;
+}
+
+.icon{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    padding-left: 7px ;
+
+    background-color: rgb(247, 245, 245);
+    width: 35px;
+    height: 45px;
+
+    border-radius: 5px;
+    
+}
+
+.middle .search{
+    margin-left: -6px;
+    background-color: rgb(247, 245, 245);
+    color: gray;
+    min-width: 550px;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.middle .search::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.middle .search:focus{
+    outline: none;
+}
+
+.right .login-btn{
+    background-color: #00b5b7;
+    color: white;
+    padding: 13px 35px;
+    border-radius: 4px;
+    border: none;
+
+    font-size: 16px;
+
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.icon ion-icon{
+    color: gray;
+    font-size: 25px;
+    --ionicon-stroke-width: 40px;
+}
+
+.header-cart ion-icon{
+    color: black;
+    font-size: 30px;
+    --ionicon-stroke-width: 30px;
+}
+
+.middle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-left: -90px;
+}
+
+.right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-left: -50px;
+}
+
+
+/* Navbar */
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 25px 85px;
+    
+
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+}
+
+.lower-nav{
+    /* background-color: #effbfc; */
+    background-color: #effbfc;
+    font-size: 14px;
+    padding: 15px;
+    margin: 0;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 500;
+}
